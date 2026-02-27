@@ -20,7 +20,7 @@ Improve response time through automated workflows
 SIEM Platform (Splunk) – Log ingestion, searching, and alerting    
 SOAR / Automation (n8n) – Workflow orchestration    
 AI Integration – Automated alert summarization & analysis  
-Windows/Linux Virtual Machines – Endpoint log generation  
+Windows/Linux Virtual Machines(VMware) – Endpoint log generation  
 Sysmon – Advanced Windows logging  
 Email/Notification System – Alert escalation  
 
