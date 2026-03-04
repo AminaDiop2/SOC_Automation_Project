@@ -5,11 +5,11 @@ This project demonstrates an automated SOC workflow that integrates Splunk (SIEM
 ##
 
 ### Technical Architecture  
-SIEM: Splunk Enterprise  
-Automation/SOAR: N8N (Self-hosted via Docker)  
-Endpoint: Windows 10 (Target machine)  
-AI Engine: Gemini  
-Communication: Slack  
+SIEM: **Splunk Enterprise**   
+Automation/SOAR: **N8N** (Self-hosted via Docker)  
+Endpoint: **Windows 10** (Target machine)  
+AI Engine: **Google Gemini**
+Communication: **Slack**  
 
 ##
 
