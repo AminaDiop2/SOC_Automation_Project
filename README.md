@@ -37,26 +37,29 @@ Slack Alert Channel
 #### Phase 1: Environment Setup
 - Hypervisor: Installed VMware Workstation Pro to host the lab environment.  
 - Virtual Machines:  
-  * Windows 10: Configured as the target endpoint for log generation[Documentation]().  
-  * Ubuntu Server (Splunk): Dedicated instance for Splunk Enterprise [Documentation]().  
-  * Ubuntu Server (N8N): Dedicated instance for the automation engine [Documentation]().   
+  * Windows 10: Configured as the target endpoint for log generation.  
+  * Ubuntu Server (Splunk): Dedicated instance for Splunk Enterprise.  
+  * Ubuntu Server (N8N): Dedicated instance for the automation engine.  
+[View Documentation here]()   
 #### Phase 2: SIEM Configuration (Splunk)
-- Splunk Installation: Installed Splunk Enterprise on the Ubuntu VM using the .deb package [Documentation]().    
+- Splunk Installation: Installed Splunk Enterprise on the Ubuntu VM using the .deb package.    
 - Telemetry Ingestion:  
-  * Installed Splunk Universal Forwarder on the Windows 10 VM[Documentation]().
+  * Installed Splunk Universal Forwarder on the Windows 10 VM.
   * Configured inputs.conf to monitor Windows Security Event Logs (Event ID 4625 - Failed Logins).
   * Installed the Splunk Add-on for Microsoft Windows to normalize data.
-- Alert Creation: Created a scheduled search in Splunk to detect failed login attempts and configured a Webhook trigger to send alert data to N8N [Documentation]().
+- Alert Creation: Created a scheduled search in Splunk to detect failed login attempts and configured a Webhook trigger to send alert data to N8N .    
+[View Documentation here]() 
 #### Phase 3: Automation Workflow (N8N)  
-- Docker Deployment: Deployed N8N on Ubuntu using Docker Compose [Documentation]().   
-- Webhook Integration: Created a Webhook node in N8N to receive the JSON payload from Splunk [Documentation]().    
+- Docker Deployment: Deployed N8N on Ubuntu using Docker Compose.   
+- Webhook Integration: Created a Webhook node in N8N to receive the JSON payload from Splunk.    
 - AI Analysis (Gemini): Integrated the OpenAI node using Gemini.  
-- Provided a System Prompt to act as a Tier 1 SOC Analyst [Documentation]().  
-- Instructed the AI to summarize the alert, map it to the MITRE ATT&CK framework, and suggest remediation steps [Documentation]().  
+- Provided a System Prompt to act as a Tier 1 SOC Analyst.  
+- Instructed the AI to summarize the alert, map it to the MITRE ATT&CK framework, and suggest remediation steps.  
+[View Documentation here]() 
 #### Phase 4: Notification (Slack)  
-- Slack App: Created a custom Slack App and configured an OAuth Bot Token with chat:write permissions [Documentation]().  
-- Final Output: Configured the Slack node in N8N to post the AI-generated security report into a dedicated #alerts channel [Documentation]().  
-
+- Slack App: Created a custom Slack App and configured an OAuth Bot Token with chat:write permissions.  
+- Final Output: Configured the Slack node in N8N to post the AI-generated security report into a dedicated #alerts channel.    
+[View Documentation here]() 
 ##
 
 ### Key Features
