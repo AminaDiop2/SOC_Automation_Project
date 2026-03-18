@@ -40,7 +40,7 @@ Slack Alert Channel
   * Windows 10: Configured as the target endpoint for log generation.  
   * Ubuntu Server (Splunk): Dedicated instance for Splunk Enterprise.  
   * Ubuntu Server (N8N): Dedicated instance for the automation engine.  
-[View Documentation here]()   
+[View Documentation here](Documentation/Phase1)   
 #### Phase 2: SIEM Configuration (Splunk)
 - Splunk Installation: Installed Splunk Enterprise on the Ubuntu VM using the .deb package.    
 - Telemetry Ingestion:  
@@ -48,18 +48,18 @@ Slack Alert Channel
   * Configured inputs.conf to monitor Windows Security Event Logs (Event ID 4625 - Failed Logins).
   * Installed the Splunk Add-on for Microsoft Windows to normalize data.
 - Alert Creation: Created a scheduled search in Splunk to detect failed login attempts and configured a Webhook trigger to send alert data to N8N .    
-[View Documentation here]() 
+[View Documentation here](Documentation/Phase2) 
 #### Phase 3: Automation Workflow (N8N)  
 - Docker Deployment: Deployed N8N on Ubuntu using Docker Compose.   
 - Webhook Integration: Created a Webhook node in N8N to receive the JSON payload from Splunk.    
 - AI Analysis (Gemini): Integrated the OpenAI node using Gemini.  
 - Provided a System Prompt to act as a Tier 1 SOC Analyst.  
 - Instructed the AI to summarize the alert, map it to the MITRE ATT&CK framework, and suggest remediation steps.  
-[View Documentation here]() 
+[View Documentation here](Documentation/Phase3) 
 #### Phase 4: Notification (Slack)  
 - Slack App: Created a custom Slack App and configured an OAuth Bot Token with chat:write permissions.  
 - Final Output: Configured the Slack node in N8N to post the AI-generated security report into a dedicated #alerts channel.    
-[View Documentation here]() 
+[View Documentation here](Documentation/Phase4) 
 ##
 
 ### Key Features
